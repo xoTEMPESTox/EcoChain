@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard</title>
+    <link rel="stylesheet" href="companyDashboard.css">
+</head>
+
+<body>
+    <header>
+        <h1>EcoChain - Company Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="navigateTo('tradeCredits.html')">Trade Carbon Credits</a>
+        <a href="#" onclick="navigateTo('creditUsage.html')">Monitor Usage</a>
+        <a href="#" onclick="navigateTo('fundProject.html')">Fund a Project</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2>Your Purchased Carbon Credits</h2>
+        <table id="creditsTable">
+            <thead>
+                <tr>
+                    <th>Credit ID</th>
+                    <th>Amount</th>
+                    <th>Date Purchased</th>
+                </tr>
+            </thead>
+            <tbody id="creditsList">
+                <!-- Carbon credits data will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <!-- New Section: Funded Projects Report -->
+        <h2>Report: Funded Projects</h2>
+        <table id="fundedProjectsTable">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Carbon Credits Purchased</th>
+                    <th>Funding Amount</th>
+                </tr>
+            </thead>
+            <tbody id="fundedProjectsList">
+                <!-- Funded project data will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="common.js"></script>
+    <script>
+          let userWalletAddress = ""; // Initially empty, will be dynamically set
+
+          // Fetch the user's wallet address dynamically
+         async function fetchUserWalletAddress() {
+            // Example API endpoint to fetch user details
+            const response = await fetch("http://localhost:5000/api/users/me", {
+            method: "GET",
+            headers: {  "Content-Type": "application/json", },
+           });
+
+            const result = await response.json();
+
+          if (result.success) {
+          userWalletAddress = result.data.walletAddress;
+          console.log("User Wallet Address:", userWalletAddress);
+         } else {
+         console.error("Failed to fetch user details");
+         alert("Error fetching user wallet address. Please log in again.");
+         window.location.href = "login.html"; // Redirect to login if user details are unavailable
+         }
+         }
+
+         fetchUserWalletAddress();
+
+
+         function loadFundedProjects() {
+           const fundedProjects = JSON.parse(localStorage.getItem("fundedProjects")) || [];
+           const reportTable = document.getElementById("fundedProjectsList");
+
+           fundedProjects.forEach(project => {
+             const row = document.createElement("tr");
+              row.innerHTML = `
+                 <td>${project.projectName}</td>
+                 <td>${project.carbonCredits}</td>
+                 <td>${project.fundAmount} USD</td>
+                `;
+                reportTable.appendChild(row);
+            });
+         }
+
+         // Call on page load
+         loadFundedProjects();
+
+         // Render funded projects into the table
+         // const fundedProjectsList = document.getElementById('fundedProjectsList');
+         // fundedProjects.forEach(project => {
+         //     const row = document.createElement('tr');
+         //     row.innerHTML = `
+         //         <td>${project.projectName}</td>
+         //         <td>${project.credits}</td>
+         //         <td>${project.amount} USD</td>
+         //     `;
+         //     fundedProjectsList.appendChild(row);
+         // });
+
+         // Navigate to other pages
+         function navigateTo(page) {
+            window.location.href = page;
+         }
+
+         // Placeholder logout function
+         function logout() {
+            alert("Logged out successfully");
+         }
+    </script>
+</body>
+
+</html>

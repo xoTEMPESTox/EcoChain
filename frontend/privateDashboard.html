@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Organization Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <header>
+        <h1>EcoChain - Private Organization Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="navigateTo('purchaseCredits.html')">Purchase Credits</a>
+        <a href="#" onclick="navigateTo('monitorFundedProjects.html')">Monitor Funded Projects</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2>Welcome to Your Dashboard</h2>
+        <p>Purchase carbon credits and monitor your contributions to sustainability.</p>
+    </div>
+
+    <script src="common.js"></script>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+        function logout() {
+            alert("Logged out successfully");
+        }
+    </script>
+</body>
+
+</html>
