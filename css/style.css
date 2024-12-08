@@ -225,8 +225,13 @@ h2 {
 	text-decoration: none;
 	color: #161a1b;
 	padding-bottom: 8px;
-	font-size: 25px;
+	font-size: 28px;
+	font-weight: 400; /* Default weight */
+	transition: font-size 0.3s, transform 0.3s, font-weight 0.3s; /* Smooth size transition */
+    position: relative; /* Ensure the pseudo-element is positioned relative */
+    border-radius: 8px; /* Rounded corners */
 }
+
 
 .contact a.mail::after {
 	position: absolute;
@@ -235,8 +240,8 @@ h2 {
 	width: 125px;
 	margin-left: -60px;
 	margin-top: 10px;
-	height: 2px;
-	background: #000000;
+	height: 3px;
+	background: #89f881;
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -246,12 +251,22 @@ h2 {
 	-moz-transform: translateY(10px);
 	transform: translateY(10px);
 }
+.contact a.mail:hover {
+    font-size: 30px; /* Increase font size on hover */
+    transform: scale(1.6); /* Slight scaling for smoother effect */
+    font-weight: 500; /* Increase font thickness */
+    backdrop-filter: blur(8px); /* Apply background blur */
+    padding: 10px; /* Add padding for better effect */
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+    border-radius: 16px; /* More rounded corners on hover */
+}
+
 
 .contact a.mail:hover::after, .contact a.mail:focus::after {
 	opacity: 1;
 	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
+	-moz-transform: translateY(0px) ;
+	transform: translateY(px);
 }
 
 /* Flakes Sizing */
