@@ -1,2 +1,2 @@
-# Deployed at  [tech-enerzal.github.io/EcoChain/](https://tech-enerzal.github.io/EcoChain/)
+# Deployed at [https://eco-chain-ashen.vercel.app](https://eco-chain-ashen.vercel.app)
 - index = Hero page
