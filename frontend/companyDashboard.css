@@ -1,0 +1,257 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #57CC99, #22577A); /* Gradient from Light Green to Dark Blue */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Header Styling */
+header {
+    background-color: #57CC99; /* Light Green */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInHeader 1s ease-out;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #38A3A5; /* Teal */
+    padding: 12px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideInNav 1s ease-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 0 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #57CC99; /* Light Green */
+    color: #22577A; /* Dark Blue */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+nav .logout {
+    background-color: #FF6347; /* Red for logout */
+}
+
+nav .logout:hover {
+    background-color: #FF4500; /* Darker red on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.4);
+}
+
+/* Main Container */
+.container {
+    margin: 20px auto;
+    max-width: 950px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeInContainer 1s ease-out;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeInTable 1s ease-out;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+table th {
+    background-color: #22577A; /* Dark Blue */
+    color: white;
+}
+
+table td {
+    background-color: #C7F9CC; /* Pale Green */
+}
+
+table tr:nth-child(even) td {
+    background-color: #80ED99; /* Very Light Green */
+}
+
+table tr:hover {
+    background-color: #e5f9f2; /* Light hover effect */
+    transform: scale(1.02);
+}
+
+table button {
+    padding: 8px 16px;
+    background-color: #38A3A5; /* Teal */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+table button:hover {
+    background-color: #57CC99; /* Light Green */
+    transform: scale(1.1);
+}
+
+/* Status Message */
+#status {
+    margin-top: 15px;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#status.success {
+    background-color: #57CC99; /* Light Green */
+    color: white;
+}
+
+#status.error {
+    background-color: #FF6347; /* Tomato */
+    color: white;
+}
+
+/* Input Fields */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #22577A; /* Dark Blue */
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+button {
+    background-color: #57CC99; /* Light Green */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #38A3A5; /* Teal */
+    transform: scale(1.05);
+}
+
+/* Table Row Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table tbody tr {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Slide-in Animation for Navbar */
+@keyframes slideInNav {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in Animation for Container */
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in Animation for Table */
+@keyframes fadeInTable {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+}

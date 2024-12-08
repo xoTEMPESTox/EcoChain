@@ -1,0 +1,180 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #57CC99, #22577A); /* Gradient from Light Green to Dark Blue */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Header Styling */
+header {
+    background-color: #57CC99; /* Light Green */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInHeader 1s ease-out;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #38A3A5; /* Teal */
+    padding: 10px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideInNav 1s ease-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #57CC99; /* Light Green */
+    color: #22577A; /* Dark Blue */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+nav .logout {
+    background-color: #FF6347; /* Red for logout */
+}
+
+nav .logout:hover {
+    background-color: #FF4500; /* Darker red on hover */
+    transform: scale(1.05);
+}
+
+/* Container Styling */
+.container {
+    margin: 40px auto; /* Center container */
+    max-width: 1000px; /* Wider container for a spacious look */
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    animation: fadeInContainer 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Table Styling */
+#projectsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#projectsTable th,
+#projectsTable td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#projectsTable th {
+    background-color: #38A3A5;
+    color: white;
+}
+
+#projectsTable tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Button Styling for Fund Action */
+#projectsTable button {
+    background-color: #57CC99;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#projectsTable button:hover {
+    background-color: #38A3A5; /* Teal */
+}
+
+/* Status Message */
+#fundStatus {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Fade-in Animation for Header */
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container Animation */
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    #projectsTable {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #projectsTable th, #projectsTable td {
+        padding: 8px 12px;
+    }
+
+    #projectsTable button {
+        padding: 8px 15px;
+    }
+}

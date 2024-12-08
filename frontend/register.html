@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoChain Wallet Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <form id="registerForm">
+        <h2>Register for EcoChain</h2>
+        
+        <!-- Wallet Connection Button -->
+        <button id="connectWalletButton" onclick="connectWallet()">Connect MetaMask Wallet</button>
+        
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        
+        <!-- Role selection -->
+        <select id="role">
+          <option value="company">Company</option>
+          <option value="ngo">Government NGO</option>
+          <option value="gov">Government Body</option>
+          <option value="private">Private Organization</option>
+        </select>
+      
+        <input type="text" id="walletAddress" placeholder="Wallet Address" readonly />
+      
+        <button type="submit">Register</button>
+      </form>
+      
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
