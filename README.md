@@ -1,1 +1,1 @@
-# EcoChain
+Coming Soon Template
