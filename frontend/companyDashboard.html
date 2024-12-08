@@ -75,20 +75,17 @@
 
         fetchUserWalletAddress();
 
-        function loadFundedProjects() {
-            const fundedProjects = JSON.parse(localStorage.getItem("fundedProjects")) || [];
-            const reportTable = document.getElementById("fundedProjectsList");
-
-            fundedProjects.forEach(project => {
-                const row = document.createElement("tr");
-                row.innerHTML = `
-                    <td>${project.projectName}</td>
-                    <td>${project.carbonCredits}</td>
-                    <td>${project.fundAmount} USD</td>
-                `;
-                reportTable.appendChild(row);
-            });
-        }
+       // Render funded projects into the table
+         // const fundedProjectsList = document.getElementById('fundedProjectsList');
+         // fundedProjects.forEach(project => {
+         //     const row = document.createElement('tr');
+         //     row.innerHTML = `
+         //         <td>${project.projectName}</td>
+         //         <td>${project.credits}</td>
+         //         <td>${project.amount} USD</td>
+         //     `;
+         //     fundedProjectsList.appendChild(row);
+         // });
 
         loadFundedProjects();
 
