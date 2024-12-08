@@ -1,5 +1,7 @@
 const express = require("express");
-const { createProject } = require("../controllers/projectController");
+const { createProject } = require("../controllers/createProject");
+const { getAllProjects } = require("../controllers/createProject");
+const { fundProject } = require("../controllers/createProject");
 const router = express.Router();
 
 // Route for creating a new project
