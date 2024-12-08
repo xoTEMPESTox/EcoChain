@@ -1,1 +1,1 @@
-Coming Soon Template
+- index = Hero page
