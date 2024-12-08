@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Government/NGO Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <title>EcoChain - Government/NGO Dashboard</title>
+    <link rel="stylesheet" href="ngogovtdashboard.css">
 </head>
 
 <body>
@@ -16,22 +16,86 @@
     <nav>
         <a href="#" onclick="navigateTo('listProject.html')">List a Project</a>
         <a href="#" onclick="navigateTo('manageProjects.html')">Monitor Projects</a>
-        <a href="#" onclick="logout()">Logout</a>
+        <a href="#" onclick="logout()" class="logout">Logout</a>
     </nav>
 
     <div class="container">
-        <h2>Welcome to Your Dashboard</h2>
-        <p>Manage your projects efficiently and monitor their progress.</p>
+        <div class="welcome-message">
+            <h1>Welcome to Your Dashboard</h1>
+            <p>Manage your projects efficiently and monitor their progress.</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Dashboard Analytics Section -->
+        <div class="analytics-container">
+            <h2>Dashboard Analytics</h2>
+            <div class="analytics">
+                <div class="card">
+                    <h3>Total Projects Listed</h3>
+                    <p id="totalProjects">Loading...</p>
+                </div>
+                <div class="card">
+                    <h3>Carbon Credits Traded</h3>
+                    <p id="carbonCredits">Loading...</p>
+                </div>
+                <div class="card">
+                    <h3>Projects Funded</h3>
+                    <p id="fundedProjects">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us Form Section -->
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="submitContactForm(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
 
     <script src="common.js"></script>
     <script>
+        // Fetch dashboard data
+        function fetchDashboardData() {
+            fetch('/dashboard-data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('totalProjects').textContent = data.totalProjects;
+                    document.getElementById('carbonCredits').textContent = data.carbonCredits;
+                    document.getElementById('fundedProjects').textContent = data.fundedProjects;
+                })
+                .catch(error => console.error('Error fetching dashboard data:', error));
+        }
+
+        fetchDashboardData();  // Fetch data on page load
+
+        // Submit contact form
+        function submitContactForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            document.getElementById('contactForm').reset();
+        }
+
+        // Navigate to other pages
         function navigateTo(page) {
             window.location.href = page;
         }
 
+        // Logout (Example functionality)
         function logout() {
-            alert("Logged out successfully");
+            alert("You have been logged out.");
+            window.location.href = "login.html";  // Replace with actual logout functionality
         }
     </script>
 </body>
