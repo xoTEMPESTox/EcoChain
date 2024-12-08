@@ -1,69 +1,117 @@
-$(window).load(function(){
-     $('.preloader').fadeOut('slow');
-});
-
-
-/* =Main INIT Function
--------------------------------------------------------------- */
-function initializeSite() {
-
+(function ($) {
 	"use strict";
+	var nav = $('nav');
+  var navHeight = nav.outerHeight();
+  
+  $('.navbar-toggler').on('click', function() {
+    if( ! $('#mainNav').hasClass('navbar-reduce')) {
+      $('#mainNav').addClass('navbar-reduce');
+    }
+  })
 
-	//OUTLINE DIMENSION AND CENTER
-	(function() {
-	    function centerInit(){
+  // Preloader
+  $(window).on('load', function () {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function () {
+        $(this).remove();
+      });
+    }
+  });
 
-			var sphereContent = $('.sphere'),
-				sphereHeight = sphereContent.height(),
-				parentHeight = $(window).height(),
-				topMargin = (parentHeight - sphereHeight) / 2;
+  // Back to top button
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.back-to-top').fadeIn('slow');
+    } else {
+      $('.back-to-top').fadeOut('slow');
+    }
+  });
+  $('.back-to-top').click(function(){
+    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+    return false;
+  });
 
-			sphereContent.css({
-				"margin-top" : topMargin+"px"
-			});
+	/*--/ Star ScrollTop /--*/
+	$('.scrolltop-mf').on("click", function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
 
-			var heroContent = $('.hero'),
-				heroHeight = heroContent.height(),
-				heroTopMargin = (parentHeight - heroHeight) / 2;
+	/*--/ Star Counter /--*/
+	$('.counter').counterUp({
+		delay: 15,
+		time: 2000
+	});
 
-			heroContent.css({
-				"margin-top" : heroTopMargin+"px"
-			});
+	/*--/ Star Scrolling nav /--*/
+	$('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: (target.offset().top - navHeight + 5)
+				}, 1000, "easeInOutExpo");
+				return false;
+			}
+		}
+	});
 
-	    }
+	// Closes responsive menu when a scroll trigger link is clicked
+	$('.js-scroll').on("click", function () {
+		$('.navbar-collapse').collapse('hide');
+	});
 
-	    $(document).ready(centerInit);
-		$(window).resize(centerInit);
-	})();
+	// Activate scrollspy to add active class to navbar items on scroll
+	$('body').scrollspy({
+		target: '#mainNav',
+		offset: navHeight
+	});
+	/*--/ End Scrolling nav /--*/
 
-	// Init effect 
-	$('#scene').parallax();
+	/*--/ Navbar Menu Reduce /--*/
+	$(window).trigger('scroll');
+	$(window).on('scroll', function () {
+		var pixels = 50; 
+		var top = 1200;
+		if ($(window).scrollTop() > pixels) {
+			$('.navbar-expand-md').addClass('navbar-reduce');
+			$('.navbar-expand-md').removeClass('navbar-trans');
+		} else {
+			$('.navbar-expand-md').addClass('navbar-trans');
+			$('.navbar-expand-md').removeClass('navbar-reduce');
+		}
+		if ($(window).scrollTop() > top) {
+			$('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
+		} else {
+			$('.scrolltop-mf').fadeOut(1000, "easeInOutExpo");
+		}
+	});
 
-};
-/* END ------------------------------------------------------- */
-
-/* =Document Ready Trigger
--------------------------------------------------------------- */
-$(window).load(function(){
-
-	initializeSite();
-	(function() {
-		setTimeout(function(){window.scrollTo(0,0);},0);
-	})();
-
-});
-/* END ------------------------------------------------------- */
-
-
-$('#countdown').countdown({
-	date: "Mar 25 2021",
-	render: function(data) {
-	  var el = $(this.el);
-	  el.empty()
-	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
-	    .append("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div>")
-	    .append("<div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div>")
-	    .append("<div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div>")
-	    .append("<div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
+	/*--/ Star Typed /--*/
+	if ($('.text-slider').length == 1) {
+    var typed_strings = $('.text-slider-items').text();
+		var typed = new Typed('.text-slider', {
+			strings: typed_strings.split(','),
+			typeSpeed: 80,
+			loop: true,
+			backDelay: 1100,
+			backSpeed: 30
+		});
 	}
-});
+
+	/*--/ Testimonials owl /--*/
+	$('#testimonial-mf').owlCarousel({
+		margin: 20,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 1,
+			}
+		}
+	});
+
+})(jQuery);

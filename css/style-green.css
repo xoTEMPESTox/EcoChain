@@ -10,7 +10,7 @@
 ======================================*/
 
 body {
-  background-color: #f5f5f5;
+  background-color: #C7F9CC;
   color: #4e4e4e;
 }
 
@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: #0078ff;
+  color: #24b67e;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -39,7 +39,7 @@ a:hover {
 }
 
 .color-a {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .color-d {
@@ -60,7 +60,7 @@ a:hover {
 
 .box-shadow-a,
 .button:hover {
-  box-shadow: 0 0 0 4px #cde1f8;
+  box-shadow: 0 0 0 4px #57CC99;
 }
 
 .display-5 {
@@ -90,7 +90,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #0078ff;
+  background-color: #000000;
 }
 
 .overlay-mf {
@@ -161,7 +161,7 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: #24b67e;
   margin: 0 auto;
 }
 
@@ -180,7 +180,7 @@ a:hover {
   content: '';
   position: absolute;
   height: 3px;
-  background-color: #0078ff;
+  background-color: #24b67e;
   width: 100px;
   bottom: -12px;
 }
@@ -217,14 +217,14 @@ a:hover {
   border-radius: 50%;
   line-height: 1.4;
   margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #0078ff;
+  box-shadow: 0 0 0 3px #24b67e;
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #0078ff;
+  background-color: #24b67e;
   color: #fff;
-  box-shadow: 0 0 0 3px #cde1f8;
+  box-shadow: 0 0 0 3px #57CC99;
   transition: all 500ms ease;
 }
 
@@ -247,7 +247,7 @@ a:hover {
 }
 
 .list-ico span {
-  color: #0078ff;
+  color: #24b67e;
   margin-right: 10px;
 }
 
@@ -261,7 +261,7 @@ a:hover {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
+  box-shadow: 0 0 0 10px #24b67e;
   display: block;
 }
 
@@ -280,15 +280,15 @@ a:hover {
   width: 18px;
   height: 7px;
   margin: 5px 5px;
-  background: #cde1f8;
-  border: 0px solid #cde1f8;
+  background: #57CC99;
+  border: 0px solid #57CC99;
   display: block;
   transition: all 0.6s ease-in-out;
   cursor: pointer;
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #cde1f8;
+  background-color: #57CC99;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
@@ -308,7 +308,7 @@ a:hover {
   position: fixed;
   width: 42px;
   height: 42px;
-  background-color: #0078ff;
+  background-color: #24b67e;
   opacity: .7;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -327,7 +327,7 @@ a:hover {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #0078ff;
+  background: #24b67e;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -345,6 +345,7 @@ a:hover {
   padding-top: 12px;
   color: #fff;
 }
+
 
 /* Prelaoder */
 
@@ -365,7 +366,7 @@ a:hover {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #f2f2f2;
-  border-top: 6px solid #0078ff;
+  border-top: 6px solid #24b67e;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -482,26 +483,26 @@ a:hover {
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-  background-color: #0078ff;
+  background-color: #24b67e;
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link,
 .navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
@@ -533,13 +534,13 @@ a:hover {
 }
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
-  background-color: #0078ff;
+  background-color: #24b67e;
   color: #fff;
   transition: all 500ms ease;
 }
 
 .navbar-b .dropdown-menu .dropdown-item.active {
-  background-color: #0078ff;
+  background-color: #24b67e;
 }
 
 /*--/ Hamburger Navbar /--*/
@@ -601,6 +602,54 @@ a:hover {
 //--//-->   INTRO
 ======================================*/
 
+.contact a.mail {
+	text-decoration: none;
+	color: #ffffff;
+	padding-bottom: 8px;
+	font-size: 28px;
+	font-weight: 400; /* Default weight */
+	transition: font-size 0.3s, transform 0.3s, font-weight 0.3s; /* Smooth size transition */
+    position: relative; /* Ensure the pseudo-element is positioned relative */
+    border-radius: 8px; /* Rounded corners */
+}
+
+
+.contact a.mail::after {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 125px;
+	margin-left: -60px;
+	margin-top: 10px;
+	height: 3px;
+	background: #89f881;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+.contact a.mail:hover {
+    font-size: 30px; /* Increase font size on hover */
+    transform: scale(1.6); /* Slight scaling for smoother effect */
+    font-weight: 500; /* Increase font thickness */
+    backdrop-filter: blur(8px); /* Apply background blur */
+    padding: 10px; /* Add padding for better effect */
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+    border-radius: 16px; /* More rounded corners on hover */
+}
+
+
+.contact a.mail:hover::after, .contact a.mail:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px) ;
+	transform: translateY(px);
+}
+
 .intro {
   height: 100vh;
   position: relative;
@@ -653,15 +702,15 @@ a:hover {
 
 .intro-single .breadcrumb {
   background-color: transparent;
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .intro-single .breadcrumb .breadcrumb-item:before {
-  color: #cde1f8;
+  color: #57CC99;
 }
 
 .intro-single .breadcrumb .breadcrumb-item.active {
-  color: #cde1f8;
+  color: #57CC99;
 }
 
 .intro-single .breadcrumb a {
@@ -672,6 +721,7 @@ a:hover {
 //--//-->   ABOUT
 ======================================*/
 
+/* General styles for the About section */
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -687,19 +737,50 @@ a:hover {
 
 .skill-mf span {
   color: #4e4e4e;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
+.skill-mf .progress-container {
+  margin-bottom: 1.2rem;
+}
+
+/* Style for the progress bars */
 .skill-mf .progress {
-  background-color: #cde1f8;
-  margin: .5rem 0 1.2rem 0;
+  background-color: #57CC99;
+  margin: 0.5rem 0 1.2rem 0;
   border-radius: 0;
-  height: .7rem;
+  height: 0.7rem;
 }
 
 .skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #0078ff;
+  height: 0.7rem;
+  background-color: #24b67e;
+  position: relative;
 }
+
+.skill-mf .progress .progress-bar .progress-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Additional styles for layout and text */
+.about-info p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 
 /*======================================
 //--//-->   SERVICES
@@ -710,18 +791,24 @@ a:hover {
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px; /* Keep the fixed height */
+  min-height: 400px;
 }
 
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
-  background-color: #0078ff;
-  box-shadow: 0 0 0 10px #cde1f8;
+  background-color: #24b67e;
+  box-shadow: 0 0 0 10px #57CC99;
 }
 
 .service-box .service-ico {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem; /* Reduced space between icon and text */
   color: #1e1e1e;
+  flex-grow: 0; /* Prevents the icon section from growing */
 }
 
 .service-box .ico-circle {
@@ -733,12 +820,19 @@ a:hover {
   font-size: 1.4rem;
   text-transform: uppercase;
   text-align: center;
-  padding: .4rem 0;
+  padding: .2rem 0; /* Reduced padding */
+  flex-grow: 0;
 }
 
 .service-box .s-description {
   color: #4e4e4e;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 /*======================================
 //--//-->   COUNTER
@@ -757,7 +851,7 @@ a:hover {
   height: 60px;
   width: 60px;
   line-height: 1.8;
-  box-shadow: 0 0 0 10px #cde1f8;
+  box-shadow: 0 0 0 10px #57CC99;
 }
 
 .counter-num .counter {
@@ -769,11 +863,22 @@ a:hover {
 //--//-->   PORTFOLIO
 ======================================*/
 
+/*======================================
+//--//-->   PORTFOLIO
+======================================*/
+
 .work-box {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  height: 90%; /* Ensure the box stretches to fill the container */
+  display: flex;
+  flex-direction: column; /* Ensure content is aligned in a column */
+  justify-content: space-between; /* Distribute space evenly */
+  border-radius: 1rem; /* Add rounded corners to the box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a soft, lifted look */
+  overflow: hidden; /* Ensure content inside the box doesn't overflow */
 }
 
 .work-box:hover img {
@@ -784,14 +889,22 @@ a:hover {
 .work-img {
   display: block;
   overflow: hidden;
+  width: 100%; /* Make sure image stretches to fill the box */
+  height: 200px; /* Set a fixed height for uniformity */
+  border-top-left-radius: 1rem; /* Rounded corners for the image top */
+  border-top-right-radius: 1rem; /* Rounded corners for the image top */
 }
 
 .work-img img {
   transition: all 1s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the whole area */
 }
 
 .work-content {
   padding: 2rem 3% 1rem 4%;
+  flex-grow: 1; /* Ensure the content stretches to fill remaining space */
 }
 
 .work-content .w-more {
@@ -800,17 +913,17 @@ a:hover {
 }
 
 .work-content .w-more .w-ctegory {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .work-content .w-like {
   font-size: 2.5rem;
-  color: #0078ff;
+  color: #24b67e;
   float: right;
 }
 
 .work-content .w-like a {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .work-content .w-like .num-like {
@@ -819,6 +932,7 @@ a:hover {
 
 .w-title {
   font-size: 1.2rem;
+  font-weight: bold; /* Make title stand out more */
 }
 
 /*======================================
@@ -853,7 +967,7 @@ a:hover {
 
 .testimonial-box .comit {
   font-size: 2rem;
-  color: #0078ff;
+  color: #24b67e;
   background-color: #fff;
   width: 52px;
   height: 52px;
@@ -886,7 +1000,7 @@ a:hover {
   color: #fff;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color: #0078ff;
+  background-color: #24b67e;
   border-radius: 4px;
 }
 
@@ -940,7 +1054,7 @@ a:hover {
 }
 
 .blog-wrapper .post-meta ul {
-  border-left: 4px solid #0078ff;
+  border-left: 4px solid #24b67e;
   margin-top: 1rem;
 }
 
@@ -950,7 +1064,7 @@ a:hover {
 }
 
 .blog-wrapper .post-meta ul a {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .blog-wrapper .post-meta ul span {
@@ -958,7 +1072,7 @@ a:hover {
 }
 
 .blog-wrapper .blockquote {
-  border-left: 4px solid #0078ff;
+  border-left: 4px solid #24b67e;
   padding: 18px;
   font-style: italic;
 }
@@ -990,7 +1104,7 @@ a:hover {
 }
 
 .box-comments .list-comments a {
-  color: #0078ff;
+  color: #24b67e;
 }
 
 .box-comments .list-comments span {
@@ -1007,7 +1121,7 @@ a:hover {
 .widget-sidebar .sidebar-title {
   font-size: 1.6rem;
   font-weight: 600;
-  border-left: 5px solid #0078ff;
+  border-left: 5px solid #24b67e;
   padding-left: 15px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -1024,7 +1138,7 @@ a:hover {
   width: 10px;
   height: 1px;
   left: 0;
-  background-color: #0078ff;
+  background-color: #24b67e;
   top: 20px;
 }
 
@@ -1035,8 +1149,8 @@ a:hover {
 }
 
 .sidebar-search .btn-search {
-  background-color: #0078ff;
-  border-color: #0078ff;
+  background-color: #24b67e;
+  border-color: #24b67e;
   border-radius: 0;
   padding-left: 20px;
   padding-right: 20px;
@@ -1044,7 +1158,7 @@ a:hover {
 
 .widget-tags ul li {
   display: inline-block;
-  background-color: #0078ff;
+  background-color: #24b67e;
   padding: .2rem .6rem;
   margin-bottom: .5rem;
   border-radius: 15px;
@@ -1093,8 +1207,8 @@ footer .credits a {
 ======================================*/
 
 #sendmessage {
-  color: #0078ff;
-  border: 1px solid #0078ff;
+  color: #24b67e;
+  border: 1px solid #24b67e;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1151,15 +1265,15 @@ footer .credits a {
 }
 
 .button:hover {
-  background-color: #0062d3;
+  background-color: #0d9963;
   color: #fff;
   transition: all 500ms ease;
 }
 
 .button-a {
-  background-color: #0078ff;
+  background-color: #24b67e;
   color: #fff;
-  border-color: #cde1f8;
+  border-color: #57CC99;
 }
 
 .button-big {
@@ -1176,6 +1290,13 @@ footer .credits a {
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: .3rem;
+}
+
+/* Ensure the layout of portfolio items is flexible */
+@media (max-width: 767px) {
+  .work-box {
+    margin-bottom: 2rem; /* Reduce margin on smaller screens */
+  }
 }
 
 @media (min-width: 577px) {
@@ -1263,4 +1384,50 @@ footer .credits a {
   .back-to-top {
     bottom: 15px;
   }
+}
+
+/* General Button Appearance */
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff; /* Dark text color */
+  font-size: 20px; /* Similar to mail */
+  font-weight: 400; /* Default weight */
+  padding: 10px 20px; /* Padding for button */
+  border-radius: 8px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  position: relative; /* For pseudo-element positioning */
+  transition: font-size 0.3s, transform 0.3s, font-weight 0.3s, background-color 0.3s;
+}
+
+/* Hover Effects */
+.btn-primary:hover {
+  font-size: 25px; /* Increase font size on hover */
+  transform: scale(1.1); /* Slight scaling for smoother effect */
+  font-weight: 500; /* Thicker font on hover */
+  backdrop-filter: blur(10px); /* Apply background blur */
+  background-color: transparent; /*Transparent white background */
+  border-radius: 16px; /* More rounded corners on hover */
+}
+
+/* Add After Pseudo-Element for Underline */
+.btn-primary::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 50%;
+  width: 125px; /* Width of the underline */
+  height: 3px; /* Height of the underline */
+  background: #89f881; /* Green underline color */
+  margin-left: -62.5px; /* Center the underline */
+  margin-top: 10px; /* Add spacing below the button */
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px); /* Initially offset the underline */
+}
+
+/* Hover Effect for the Underline */
+.btn-primary:hover::after {
+  opacity: 1; /* Make the underline visible */
+  transform: translateY(0); /* Bring the underline into view */
 }
