@@ -140,7 +140,7 @@ h2 {
 
 /* Background */
 .background {
-  background: url(../images/background.jpg) no-repeat 50% 100%;
+  background: url(../images/background.mp4) no-repeat 50% 100%;
   bottom: -20px;
   background-size: cover;
   position: absolute;
@@ -210,7 +210,7 @@ h2 {
 	-moz-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	color: black;
-	font-size: 24px;
+	font-size: 30px;
 }
 
 
@@ -225,7 +225,7 @@ h2 {
 	text-decoration: none;
 	color: #161a1b;
 	padding-bottom: 8px;
-	font-size: 15px;
+	font-size: 25px;
 }
 
 .contact a.mail::after {
@@ -235,8 +235,8 @@ h2 {
 	width: 125px;
 	margin-left: -60px;
 	margin-top: 10px;
-	height: 1px;
-	background: #666666;
+	height: 2px;
+	background: #000000;
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
