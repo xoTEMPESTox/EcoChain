@@ -351,6 +351,19 @@ h2 {
 	.title { top: 15%;}
 	.contact .icons { margin-bottom: 0px; }
 	/* SIZES */
+	/* Ensure all images and videos fit the screen */
+img, video {
+    width: 100%; /* Makes them stretch to the full width of the container */
+    height: auto; /* Maintains the original aspect ratio */
+    object-fit: cover; /* Ensures the content fills its container proportionally */
+}
+
+/* Adjust the background video styling */
+.background video {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures video stretches without distortion */
+}
 	.sphere img{
 		-webkit-transform: scale(0.6);
 		-moz-transform: scale(0.6);
