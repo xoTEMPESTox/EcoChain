@@ -526,6 +526,18 @@ img, video {
 		-ms-transform: scale(1,1);
 		transform: scale(1);
 	}
+	img, video {
+    width: 100%; /* Makes them stretch to the full width of the container */
+    height: auto; /* Maintains the original aspect ratio */
+    object-fit: cover; /* Ensures the content fills its container proportionally */
+}
+
+/* Adjust the background video styling */
+.background video {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures video stretches without distortion */
+}
 	.depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
 		-webkit-transform: scale(0.8);
 		-moz-transform: scale(0.8);
